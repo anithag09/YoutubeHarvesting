@@ -1,9 +1,8 @@
 ## Packages to be installed
-- [Prerequisites]
-- [Installation]
-- [Usage]
-- [Functionalities](#functionalities)
-- [FAQ Queries](#faq-queries)
-- [Code Overview](#code-overview)
-- [Closing the Database Connection](#closing-the-database-connection)
-- [Contact](#contact)
+- googleapiclient for python
+- pymysql
+- datetime
+- re
+- streamlit
+- pandas
+
