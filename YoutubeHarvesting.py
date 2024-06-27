@@ -8,7 +8,7 @@ import streamlit as st
 import pandas as pd
 
 # YouTube API Key
-api_key = "AIzaSyCohnGk0Zivw111Chada6Az2NqgndJMqz0"
+api_key = "*********"
 
 # Initialize YouTube API client
 youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=api_key)
@@ -16,7 +16,7 @@ youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=api_key)
 # Establish SQL connection
 def connect_database():
     try:
-        myconnection = pymysql.connect(host='127.0.0.1', user='root', passwd='sairam19', database='Youtube')
+        myconnection = pymysql.connect(host='127.0.0.1', user='root', passwd='*****', database='Youtube')
         return myconnection
     except Exception as e:
         st.error(f"An error occurred while connecting to the database: {e}")
