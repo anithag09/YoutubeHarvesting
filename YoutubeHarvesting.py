@@ -8,7 +8,7 @@ import streamlit as st
 import pandas as pd
 
 # YouTube API Key
-api_key = "*********"
+api_key = "AIzaSyCohnGk0Zivw111Chada6Az2NqgndJMqz0"
 
 # Initialize YouTube API client
 youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=api_key)
@@ -16,7 +16,7 @@ youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=api_key)
 # Establish SQL connection
 def connect_database():
     try:
-        myconnection = pymysql.connect(host='127.0.0.1', user='root', passwd='*****', database='Youtube')
+        myconnection = pymysql.connect(host='127.0.0.1', user='root', passwd='sairam19', database='Youtube')
         return myconnection
     except Exception as e:
         st.error(f"An error occurred while connecting to the database: {e}")
@@ -159,6 +159,9 @@ def convert_duration(duration):
     pattern = re.compile(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?')
     match = pattern.match(duration)
 
+    if not match:
+        return "0 min 0 sec"
+
     hours = int(match.group(1)) if match.group(1) else 0
     minutes = int(match.group(2)) if match.group(2) else 0
     seconds = int(match.group(3)) if match.group(3) else 0
@@ -167,6 +170,7 @@ def convert_duration(duration):
     readable_duration = f"{int(total_seconds // 60)} min {int(total_seconds % 60)} sec"
     
     return readable_duration
+
 
 # Insert video data into MySQL
 def insert_video_data(video_info_list):
