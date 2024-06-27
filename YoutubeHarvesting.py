@@ -1,4 +1,5 @@
 import googleapiclient.discovery
+from googleapiclient.errors import HttpError
 import pymysql
 from datetime import datetime
 from datetime import timedelta
@@ -248,8 +249,11 @@ def get_comment_info(video_ids):
                         comment_published_date=cmt['snippet']['topLevelComment']['snippet']['publishedAt']
                     )
                     comment_info.append(comment)
-            except:
-                pass
+            except HttpError as e:
+                if e.resp.status == 403:
+                    print(f"Comments are disabled for video ID: {ids}")
+                else:
+                    print(f"An error occurred: {e}")
         return comment_info
     except Exception as e:
         st.error(f"An error occurred while fetching comments: {e}")
