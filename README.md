@@ -1,7 +1,7 @@
 YouTube Data Harvesting and Warehousing
 This project is designed to extract data from YouTube using the YouTube Data API, store it in a MySQL database, and display it using Streamlit. The application supports various functionalities such as fetching channel information, video details, comments, and generating insights based on the data.
 
-Table of Contents
+Table of Contents:
 Prerequisites
 Installation
 Usage
@@ -29,14 +29,18 @@ Usage
     streamlit run YoutubeHarvesting.py
 2. Enter a YouTube channel ID in the provided text field and use the buttons to upload data to SQL or view channel info.
 
-Functionalities
-Channel Information
+Functionalities:
+
+Channel Information:
 Fetch and store channel information including channel name, ID, subscription count, view count, description, and playlist ID.
-Video Information
+
+Video Information:
 Fetch and store video details including video ID, name, thumbnail, published date, duration, caption status, view count, like count, favorite count, and comment count.
-Comments Information
+
+Comments Information:
 Fetch and store comments on videos including comment ID, video ID, author name, comment text, and published date.
-FAQ Queries
+
+FAQ Queries:
 Generate insights based on the data such as:
 Names of all videos and their corresponding channels.
 Channels with the most number of videos.
@@ -48,7 +52,9 @@ Total number of views for each channel.
 Channels that published videos in the year 2022.
 Average duration of videos in each channel.
 Videos with the highest number of comments.
-Code Overview
+
+Code Overview:
+
 Database Connection
 The connect_database function establishes a connection to the MySQL database.
 
