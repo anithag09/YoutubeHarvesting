@@ -32,7 +32,7 @@ This project is designed to extract data from YouTube using the YouTube Data API
 ## Usage
 1. Run the Streamlit application:
     ```bash
-    streamlit run app.py
+    streamlit run YoutubeHarvesting.py
     ```
 2. Enter a YouTube channel ID in the provided text field and use the buttons to upload data to SQL or view channel info.
 
