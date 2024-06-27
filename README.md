@@ -1,4 +1,5 @@
 YouTube Data Harvesting and Warehousing
+
 This project is designed to extract data from YouTube using the YouTube Data API, store it in a MySQL database, and display it using Streamlit. The application supports various functionalities such as fetching channel information, video details, comments, and generating insights based on the data.
 
 Table of Contents:
