@@ -10,7 +10,7 @@ This project is designed to extract data from YouTube using the YouTube Data API
 - [FAQ Queries](#faq-queries)
 - [Code Overview](#code-overview)
 - [Closing the Database Connection](#closing-the-database-connection)
-- [Contact](#contact)
+
 
 ## Prerequisites
 - Python 3.x
